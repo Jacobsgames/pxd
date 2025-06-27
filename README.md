@@ -1,3 +1,2 @@
-# pxd
 ![Logo](pxd_logo_big.png)
-Pixel Editor made with Python
+# Pixel Editor made with Python
