@@ -20,7 +20,7 @@ MAX_SCALE = 32
 canvas_image = None         # CPU-side image storing pixel data
 canvas_texture = None       # GPU texture for drawing canvas_image
 canvas_pos_x = 128          # Canvas top-left X on screen (used for panning)
-canvas_pos_y = 128          # Canvas top-left Y on screen (used for panning)
+canvas_pos_y = 64          # Canvas top-left Y on screen (used for panning)
 
 # --- Interpolation State ---
 prev_cell_pos = None        # Previous canvas cell coordinate for smooth drawing
@@ -222,7 +222,6 @@ while not rl.window_should_close():
     elif wheel_move < 0:
         zoom_canvas(False)
 
-    ui.draw_rect(-1,-1,1932,24, 1,rgba(0, 0, 0, 255), rgba(255, 255, 255, 255)) #placeholder top bar
 
 
 
@@ -231,9 +230,15 @@ while not rl.window_should_close():
 
 # --- LOOP END (Draw frame)  ---
     rl.begin_drawing()
-    rl.clear_background(rgba(0, 0, 0, 255))  # Black background
+    rl.clear_background(rgba(20, 20, 20, 255))  # Black background
+
+
     draw_canvas(canvas_pos_x, canvas_pos_y)  # Draw zoomed and panned canvas
+    ui.draw_rect(-1,-2,1932,24, 1,rgba(0, 0, 0, 255), rgba(255, 255, 255, 255)) #placeholder top bar
+    ui.draw_rect(-1,64,128,512, 1,rgba(0, 0, 0, 255), rgba(255, 255, 255, 255))
     fps_count()
+   
+
     rl.end_drawing()
 
 unload_canvas()

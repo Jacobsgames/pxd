@@ -1,13 +1,24 @@
 #“A lightweight Python immediate mode GUI built on raylib.”
 import raylibpy as rl
 
-# Base styled rectangle primative
-def draw_rect(x, y, w, h, border_width, fill_color, border_color):
-    # Draw the filled rectangle
-    rl.draw_rectangle(x, y, w, h, fill_color)
+# Base styled rectangle primative - Draw rect with (n)px border contained within the rect
+def draw_rect(x, y, w, h, bw, fill_clr, b_clr):
+    # Draw filled background
+    rl.draw_rectangle(x, y, w, h, fill_clr)
 
-    # Draw the border (outline) around it
-    rl.draw_rectangle_lines_ex(rl.Rectangle(x, y, w, h), border_width, border_color)
+    # Manually draw borders (top, bottom, left, right)
+    rl.draw_rectangle(x, y, w, bw, b_clr)               # Top
+    rl.draw_rectangle(x, y + h - bw, w, bw, b_clr)      # Bottom
+    rl.draw_rectangle(x, y + bw, bw, h - 2 * bw, b_clr) # Left
+    rl.draw_rectangle(x + w - bw, y + bw, bw, h - 2 * bw, b_clr) # Right
+""" 
+This manual border drawing fixes the problem of `draw_rectangle_lines_ex`
+rendering borders half inside and half outside the rectangle edges,
+which causes visual overflow and misalignment. By drawing four filled
+rectangles for each border edge, the border stays fully inside the
+original rectangle bounds, ensuring precise and consistent visuals. 
+"""
+
 
 
 def button(x, y, w, h, text):
