@@ -1,175 +1,125 @@
-import dearpygui.dearpygui as ui
-import numpy as np
-from PIL import Image
-from img_io import load_image, save_image
-import os
+import raylibpy as rl
+import fileIO  # Handles image saving/loading using raylib
 
-# === Globals ===
-canvas_image = None
-CANVAS_ZOOM = 8
-TITLEBAR_HEIGHT_APPROX = 28  # Approximate height of the DPG title bar
+# --- Canvas Config ---
+canvas_width = 32           # Canvas pixel width
+canvas_height = 32          # Canvas pixel height
+canvas_scale = 16           # Scale each canvas pixel by this amount on screen
 
-# Supported file extensions for dialogs
-SUPPORTED_EXTENSIONS = [".png", ".jpg"]
+# --- Canvas State ---
+canvas_image = None         # raylib image storing pixel data (CPU-side)
+canvas_texture = None       # GPU texture used for drawing the image
+canvas_pos_x = 128          # Canvas top-left X position on screen
+canvas_pos_y = 128
 
-# === Theme Setup ===
-def setup_themes():
-    """Define and bind the application themes."""
-    with ui.theme(tag="pxd_dark_theme"):
-        with ui.theme_component(ui.mvAll):
-            ui.add_theme_color(ui.mvThemeCol_WindowBg, (0, 0, 0, 255))
-            ui.add_theme_color(ui.mvThemeCol_FrameBg, (20, 20, 20, 255))
-            ui.add_theme_color(ui.mvThemeCol_ChildBg, (10, 10, 10, 255))
-            ui.add_theme_color(ui.mvThemeCol_TitleBg, (0, 0, 0, 255))
-            ui.add_theme_color(ui.mvThemeCol_TitleBgActive, (0, 0, 0, 255))
-            ui.add_theme_color(ui.mvThemeCol_TitleBgCollapsed, (0, 0, 0, 255))
-            ui.add_theme_color(ui.mvThemeCol_Text, (255, 255, 255, 255))
-            ui.add_theme_color(ui.mvThemeCol_Border, (255, 255, 255, 255))
-            ui.add_theme_color(ui.mvThemeCol_BorderShadow, (0, 0, 0, 0))
-            ui.add_theme_color(ui.mvThemeCol_Button, (50, 50, 50, 255))
-            ui.add_theme_color(ui.mvThemeCol_ButtonHovered, (70, 70, 70, 255))
-            ui.add_theme_color(ui.mvThemeCol_ButtonActive, (100, 100, 100, 255))
-            ui.add_theme_style(ui.mvStyleVar_FrameBorderSize, 1)
-            ui.add_theme_style(ui.mvStyleVar_WindowBorderSize, 1)
-            ui.add_theme_style(ui.mvStyleVar_FramePadding, 4, 2)
-        with ui.theme_component(ui.mvFileExtension, parent="pxd_dark_theme"):
-            ui.add_theme_color(ui.mvThemeCol_Text, (255, 255, 0, 255))
+# --- Interpolation State ---
+prev_cell_pos = None        # Previous canvas cell (x, y) for brush interpolation
 
-    with ui.theme(tag="canvas_style"):
-        with ui.theme_component(ui.mvWindowAppItem):
-            # Remove window inner padding (top, left, right, bottom)
-            ui.add_theme_style(ui.mvStyleVar_WindowPadding, 0, 0)
+# --- FPS Counter ---
+def fps_count():
+    fps_text = f"FPS: {rl.get_fps()}"
+    text_width = rl.measure_text(fps_text, 20)
+    x_pos = rl.get_screen_width() - text_width - 10
+    rl.draw_text(fps_text, x_pos, 10, 20, rl.GREEN)
 
-    # Bind the main dark theme globally
-    ui.bind_theme("pxd_dark_theme")
+# --- Initialize a blank white canvas ---
+def init_canvas(width, height):
+    global canvas_image, canvas_texture
+    canvas_image = rl.gen_image_color(width, height, rl.RAYWHITE)
+    canvas_texture = rl.load_texture_from_image(canvas_image)
 
-# === Canvas Creation ===
-def create_canvas_texture_and_widget(width, height):
-    """Create or recreate the raw texture and image widget inside the canvas window."""
-    if ui.does_item_exist("canvas_texture"):
-        ui.delete_item("canvas_texture")
-    if ui.does_item_exist("canvas_image_widget"):
-        ui.delete_item("canvas_image_widget")
+# --- Convert mouse screen pixel to canvas cell coordinates ---
+def screen_to_cell(pixel_x, pixel_y):
+    # Adjust for canvas position and scale to get canvas grid coords
+    local_x = pixel_x - canvas_pos_x
+    local_y = pixel_y - canvas_pos_y
+    cell_x = int(local_x // canvas_scale)
+    cell_y = int(local_y // canvas_scale)
+    return cell_x, cell_y
 
-    # Create raw texture with transparent black pixels (float RGBA)
-    ui.add_raw_texture(
-        width=width,
-        height=height,
-        default_value=np.zeros(width * height * 4, dtype=np.float32),
-        format=ui.mvFormat_Float_rgba,
-        tag="canvas_texture",
-        parent="canvas_texture_registry"
-    )
+# --- Draw a black pixel at canvas cell coords ---
+def draw_cell(cell_x, cell_y):
+    global canvas_image, canvas_texture
+    if 0 <= cell_x < canvas_width and 0 <= cell_y < canvas_height:
+        rl.image_draw_pixel(canvas_image, cell_x, cell_y, rl.BLACK)  # Update CPU image
+        rl.unload_texture(canvas_texture)                            # Free old texture
+        canvas_texture = rl.load_texture_from_image(canvas_image)    # Reload GPU texture
 
-    # Add image widget to display the texture inside the canvas window
-    ui.add_image(
-        texture_tag="canvas_texture",
-        parent="MainCanvas",
-        tag="canvas_image_widget",
-        width=width,
-        height=height
-    )
+# --- Interpolate line between two canvas cells ---
+def trace_input_path(x0, y0, x1, y1):
+    points = []
+    dx = x1 - x0
+    dy = y1 - y0
+    steps = max(abs(dx), abs(dy))
+    if steps == 0:
+        return [(x0, y0)]
+    for i in range(steps + 1):
+        x = int(x0 + dx * i / steps)
+        y = int(y0 + dy * i / steps)
+        points.append((x, y))
+    return points
 
-    # Set fixed canvas window size (image height + approx title bar)
-    ui.set_item_width("MainCanvas", width)
-    ui.set_item_height("MainCanvas", height + 17)  # tweak 17 as needed
+# --- Draw the canvas to screen ---
+def draw_canvas(pos_x=0, pos_y=0):
+    rl.draw_texture_ex(canvas_texture, rl.Vector2(pos_x, pos_y), 0, canvas_scale, rl.WHITE)
 
-# === Callbacks ===
-def load_image_callback(sender, app_data):
-    """Load image file, resize with zoom, update canvas texture, show canvas window."""
-    global canvas_image
+# --- Cleanup resources ---
+def unload_canvas():
+    rl.unload_texture(canvas_texture)
 
-    path = app_data.get('file_path_name')
-    if path:
-        img = load_image(path)
-        if img:
-            # Resize image with nearest neighbor (pixel art scaling)
-            canvas_image = img.resize(
-                (img.width * CANVAS_ZOOM, img.height * CANVAS_ZOOM),
-                Image.NEAREST
-            )
 
-            create_canvas_texture_and_widget(canvas_image.width, canvas_image.height)
+# =============================================================================
+#                               Main Program
+# =============================================================================
 
-            # Convert PIL image to float32 buffer normalized [0,1]
-            buffer = np.array(canvas_image.getdata(), dtype=np.float32) / 255.0
-            ui.set_value("canvas_texture", buffer)
+rl.init_window(800, 600, "pxd")
+rl.set_window_state(rl.FLAG_WINDOW_RESIZABLE)
+rl.maximize_window()
+rl.set_target_fps(240)
 
-            ui.set_item_label("MainCanvas", os.path.basename(path))
-            ui.show_item("MainCanvas")
-            ui.bind_item_theme("MainCanvas", "canvas_style")
+init_canvas(canvas_width, canvas_height)
 
-def save_image_callback(sender, app_data):
-    """Save the currently loaded image to file."""
-    path = app_data.get('file_path_name')
-    if path and canvas_image:
-        save_image(canvas_image, path)
+while not rl.window_should_close():
+    # --- Handle drawing with interpolation ---
+    if rl.is_mouse_button_down(rl.MOUSE_LEFT_BUTTON):
+        mouse = rl.get_mouse_position()
+        pixel_x, pixel_y = mouse.x, mouse.y   # Mouse screen pixel coords
 
-# === Main Application Setup ===
+        # Convert screen pixels to canvas cells
+        curr_cell_x, curr_cell_y = screen_to_cell(pixel_x, pixel_y)
 
-ui.create_context()
-ui.create_viewport(title="pxd - Pixel Editor", width=800, height=600)
+        if prev_cell_pos is not None:
+            prev_cell_x, prev_cell_y = prev_cell_pos
+            # Interpolate and draw all cells between previous and current position
+            for cell_x, cell_y in trace_input_path(prev_cell_x, prev_cell_y, curr_cell_x, curr_cell_y):
+                draw_cell(cell_x, cell_y)
+        else:
+            draw_cell(curr_cell_x, curr_cell_y)  # Draw current cell if no previous pos
 
-setup_themes()
+        prev_cell_pos = (curr_cell_x, curr_cell_y)  # Store current for next frame
+    else:
+        prev_cell_pos = None  # Reset when mouse button is released
 
-# Texture registry to hold raw textures (hidden)
-with ui.texture_registry(show=False, tag="canvas_texture_registry"):
-    pass
+    # --- Save canvas to file ---
+    if rl.is_key_pressed(rl.KEY_S):
+        fileIO.save_canvas(canvas_image, "canvas.png")
 
-# Menu bar with File, Edit, Help menus and callbacks
-with ui.viewport_menu_bar():
-    with ui.menu(label="File"):
-        ui.add_menu_item(label="New")
-        ui.add_menu_item(label="Open...", callback=lambda: ui.show_item("open_file_dialog"))
-        ui.add_menu_item(label="Save")
-        ui.add_menu_item(label="Save As...", callback=lambda: ui.show_item("save_file_dialog"))
-        ui.add_separator()
-        ui.add_menu_item(label="Exit", callback=lambda: ui.destroy_context())
-    with ui.menu(label="Edit"):
-        ui.add_menu_item(label="Undo")
-        ui.add_menu_item(label="Redo")
-        ui.add_separator()
-        ui.add_menu_item(label="Cut")
-        ui.add_menu_item(label="Copy")
-        ui.add_menu_item(label="Paste")
-    with ui.menu(label="Help"):
-        ui.add_menu_item(label="About")
+    # --- Load canvas from file ---
+    if rl.is_key_pressed(rl.KEY_W):
+        loaded_image = fileIO.load_canvas()
+        if loaded_image:
+            rl.unload_texture(canvas_texture)
+            canvas_image = loaded_image
+            canvas_texture = rl.load_texture_from_image(canvas_image)
+            print("Canvas loaded from disk.")
 
-# Main canvas window (hidden until image loaded)
-with ui.window(tag="MainCanvas", label="Canvas", show=False,
-               no_resize=False, no_collapse=False, no_scrollbar=True):
-    pass
+    # --- Draw Frame ---
+    rl.begin_drawing()
+    rl.clear_background(rl.BLACK)
+    draw_canvas(canvas_pos_x, canvas_pos_y)
+    fps_count()
+    rl.end_drawing()
 
-# Save file dialog
-with ui.file_dialog(directory_selector=False, show=False, tag="save_file_dialog",
-                    default_filename="my_pixel_art.png", callback=save_image_callback,
-                    width=700, height=400):
-    for ext in SUPPORTED_EXTENSIONS:
-        ui.add_file_extension(ext, color=(255, 255, 0, 255) if ext == ".png" else None)
-
-# Open file dialog
-with ui.file_dialog(directory_selector=False, show=False, tag="open_file_dialog",
-                    callback=load_image_callback, width=700, height=400):
-    for ext in SUPPORTED_EXTENSIONS:
-        ui.add_file_extension(ext, color=(255, 255, 0, 255) if ext == ".png" else None)
-
-# Run the app
-ui.setup_dearpygui()
-ui.show_viewport()
-ui.maximize_viewport()
-ui.start_dearpygui()
-ui.destroy_context()
-
-"""
-pxd - Pixel Art Editor
-
-This script implements a minimal pixel art editor UI using DearPyGui.
-It supports:
-- Loading and displaying pixel art images with nearest neighbor scaling.
-- Saving the current canvas image.
-- A fixed-size canvas window that matches the displayed image size exactly.
-- A dark-themed UI with menus for file operations and editing.
-
-The canvas texture and image widget are recreated each time an image is loaded.
-The UI is built around DearPyGui's texture registry, windows, menus, and dialogs.
-"""
+# --- Shutdown ---
+unload_canvas()
+rl.close_window()
