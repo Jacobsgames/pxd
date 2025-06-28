@@ -127,12 +127,7 @@ def canvas_panning(active: bool):
     else:
         panning = False
 
-# --- Main Program Setup ---
-rl.init_window(800, 600, "pxd")
-set_window_theme("DARK")
-rl.set_window_state(rl.FLAG_WINDOW_RESIZABLE)
-rl.maximize_window()
-rl.set_target_fps(60)
+
 
 # init our GUI library (loads theme & font into pxgui.px_theme)
 ui.pxgui_init()
@@ -174,9 +169,9 @@ while not rl.window_should_close():
     rl.begin_drawing()
     rl.clear_background(rgba(20, 20, 20, 255))
     draw_canvas(canvas_pos_x, canvas_pos_y)
-    ui.draw_rect(-1, -2, 1932, 24)            # placeholder top bar
-    ui.draw_text(4, 2, "pxd")                 # placeholder title
-    ui.draw_rect(-1, 64, 128, 512)            # placeholder side
+    ui.blit_rect(-1, -2, 1932, 24)            # placeholder top bar
+    ui.blit_text(4, 2, "pxd")                 # placeholder title
+    ui.blit_rect(-1, 64, 128, 512)            # placeholder side
     fps_count()
     rl.end_drawing()
 

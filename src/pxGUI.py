@@ -59,7 +59,7 @@ def pxgui_init():
 # --- PRIMITIVES ---
 
 # Draw styled rectangle; accepts optional RectStyle
-def draw_rect(x, y, w, h, style: RectStyle = None):
+def blit_rect(x, y, w, h, style: RectStyle = None):
     style = style or px_theme.rect
     fill = style.fill
     b_clr = style.border
@@ -72,13 +72,13 @@ def draw_rect(x, y, w, h, style: RectStyle = None):
     rl.draw_rectangle(x + w - bw, y + bw, bw, h - 2 * bw, b_clr) # Right
 
 # Draw styled text; accepts optional TextStyle
-def draw_text(x, y, text, style: TextStyle = None):
+def blit_text(x, y, text, style: TextStyle = None):
     style = style or px_theme.text
     # draw_text_ex(font, text, position, fontSize, spacing, tint)
     rl.draw_text_ex(style.font, text, (x, y), style.size, 0, style.color)
 
 # Composite label from rect and text; accepts optional LabelStyle
-def draw_label(x, y, w, h, text, style: LabelStyle = None):
+def blit_label(x, y, w, h, text, style: LabelStyle = None):
     style = style or px_theme.label
     draw_rect(x, y, w, h, style.rect)
     # center text
@@ -86,7 +86,7 @@ def draw_label(x, y, w, h, text, style: LabelStyle = None):
     tw = rl.measure_text(text, sz)
     tx = x + (w - tw) // 2
     ty = y + (h - sz) // 2
-    draw_text(tx, ty, text, style.text)
+    blit_text(tx, ty, text, style.text)
 
 # Very minimal button for testing
 def button(x, y, w, h, text):
@@ -95,11 +95,11 @@ def button(x, y, w, h, text):
     clicked = hit and rl.is_mouse_button_pressed(rl.MOUSE_LEFT_BUTTON)
     # reuse label style for hover, rect style otherwise
     style = px_theme.label.rect if hit else px_theme.rect
-    draw_rect(x, y, w, h, style)
+    blit_rect(x, y, w, h, style)
     # text
     txt_style = px_theme.label.text if hit else px_theme.text
     tw = rl.measure_text(text, txt_style.size)
     tx = x + (w - tw) // 2
     ty = y + (h - txt_style.size) // 2
-    draw_text(tx, ty, text, txt_style)
+    blit_text(tx, ty, text, txt_style)
     return clicked
