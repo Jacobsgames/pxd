@@ -1,6 +1,14 @@
 #“A lightweight Python immediate mode GUI built on raylib.”
 import raylibpy as rl
 
+# Base styled rectangle primative
+def draw_rect(x, y, w, h, border_width, fill_color, border_color):
+    # Draw the filled rectangle
+    rl.draw_rectangle(x, y, w, h, fill_color)
+
+    # Draw the border (outline) around it
+    rl.draw_rectangle_lines_ex(rl.Rectangle(x, y, w, h), border_width, border_color)
+
 
 def button(x, y, w, h, text):
     mouse_pos = rl.get_mouse_position()

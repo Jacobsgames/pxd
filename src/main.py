@@ -1,7 +1,11 @@
-import raylibpy as rl
-import fileIO  # Handles image saving/loading using raylib
-import ctypes
-import easygui
+import raylibpy as rl   # Core renderer
+import fileIO           # Handles image saving/loading using raylib
+import pxgui as ui       # Handles GUI using custom raylib powered framework
+
+import ctypes           # Used to access windows to set the OS windows theme
+import easygui          # Handles filedialog & other OS popups
+
+
 
 # --- Canvas Config ---
 canvas_width = 32           # Canvas pixel width
@@ -10,7 +14,7 @@ cell_size = 16              # Initial canvas scale (zoom level)
 
 # Zoom limits (to prevent too large or too small scaling)
 MIN_SCALE = 4
-MAX_SCALE = 64
+MAX_SCALE = 32
 
 # --- Canvas State ---
 canvas_image = None         # CPU-side image storing pixel data
@@ -35,8 +39,8 @@ def rgba(r, g, b, a) -> rl.Color:
 def fps_count():
     fps_text = f"FPS: {rl.get_fps()}"
     text_width = rl.measure_text(fps_text, 20)
-    x_pos = rl.get_screen_width() - text_width - 10  # 10px padding from right edge
-    rl.draw_text(fps_text, x_pos, 10, 20, rgba(58, 227, 43, 255))  # Bright green text
+    x_pos = rl.get_screen_width() - text_width - 5  # 10px padding from right edge
+    rl.draw_text(fps_text, x_pos, 2, 20, rgba(200, 200, 200, 255))  # Bright green text
 
 
 # --- Initialize blank canvas image and GPU texture ---
@@ -217,6 +221,8 @@ while not rl.window_should_close():
         zoom_canvas(True)
     elif wheel_move < 0:
         zoom_canvas(False)
+
+    ui.draw_rect(-1,-1,1932,24, 1,rgba(0, 0, 0, 255), rgba(255, 255, 255, 255)) #placeholder top bar
 
 
 
