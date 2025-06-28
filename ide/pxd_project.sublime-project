@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": "C:/Code/pxd"
+    }
+  ],
+  "settings": {
+    "terminus_view.settings": {
+      "shell_config": "PowerShell venv"
+    }
+  }
+}

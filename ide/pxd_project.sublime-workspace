@@ -1,0 +1,1307 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gly",
+				"glyph_tool"
+			],
+			[
+				"ALIGN",
+				"ALIGN_RIGHT"
+			],
+			[
+				"fina",
+				"final_area"
+			],
+			[
+				"tm",
+				"tm_text"
+			],
+			[
+				"alig",
+				"ALIGN_CENTER"
+			],
+			[
+				"LEFT",
+				"ALIGN_LEFT"
+			],
+			[
+				"align",
+				"align_mode"
+			],
+			[
+				"rca",
+				"rcap_y"
+			],
+			[
+				"lca",
+				"lcap_y"
+			],
+			[
+				"tm_draw",
+				"tm_draw_glyph"
+			],
+			[
+				"fin",
+				"final_area"
+			],
+			[
+				"tm_set",
+				"tm_set_spacing"
+			],
+			[
+				"grid_to",
+				"gridrect_to_pixelrect"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"DARK",
+				"DARKGRAY"
+			],
+			[
+				"tm_al",
+				"tm_align_vertical"
+			],
+			[
+				"ALIG",
+				"ALIGN_CENTER"
+			],
+			[
+				"cel",
+				"cell_w"
+			],
+			[
+				"h",
+				"cell_h"
+			],
+			[
+				"cell",
+				"cell_h"
+			],
+			[
+				"ce",
+				"cell_w"
+			],
+			[
+				"TMGUI",
+				"STYLE_TMGUI"
+			],
+			[
+				"TM",
+				"TM_ALIGN_RIGHT"
+			],
+			[
+				"STYLE",
+				"STYLE_TMGUI"
+			],
+			[
+				"GRID",
+				"GRID_HEIGHT"
+			],
+			[
+				"TMG",
+				"STYLE_TMGUI"
+			],
+			[
+				"tmg",
+				"tmgui_shutdown"
+			],
+			[
+				"tmgui",
+				"tmgui_init"
+			],
+			[
+				"Frame",
+				"FRAME_HEIGHT"
+			],
+			[
+				"F",
+				"FRAME_HEIGHT"
+			],
+			[
+				"FRAME",
+				"FRAME_HEIGHT"
+			],
+			[
+				"FRA",
+				"FRAME_HEIGHT"
+			],
+			[
+				"FRAM",
+				"FRAME_HEIGHT"
+			],
+			[
+				"main",
+				"main_font"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"W",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"def",
+				"def\tFunction"
+			],
+			[
+				"player",
+				"player_pos"
+			],
+			[
+				"DrawRect",
+				"DrawRectangleV(position: Vector2, size: Vector2, color: Color)"
+			],
+			[
+				"pla",
+				"player_pos"
+			],
+			[
+				"Rectangle",
+				"Rectangle"
+			],
+			[
+				"Circle",
+				"CheckCollisionCircleRec(center: Vector2, radius: f32, rec: Rectangle) "
+			],
+			[
+				"pl",
+				"player_pos"
+			],
+			[
+				"de",
+				"delta"
+			],
+			[
+				"text",
+				"Texture"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Code/pxd/README.md",
+			"settings":
+			{
+				"buffer_size": 111,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAAUAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAABQAAAAAAAAAFAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"paste",
+					null,
+					"AQAAAAcAAAAAAAAAHwAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAABwAAAAAAAAAHAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAUAAAAAAAAABQAAAAAAAAABAAAACg",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAwGRA"
+				],
+				[
+					10,
+					5,
+					"left_delete",
+					null,
+					"BQAAABMAAAAAAAAAEwAAAAAAAAABAAAAcxIAAAAAAAAAEgAAAAAAAAABAAAAdBEAAAAAAAAAEQAAAAAAAAABAAAAZRAAAAAAAAAAEAAAAAAAAAABAAAAcw8AAAAAAAAADwAAAAAAAAABAAAAcw",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAFAAAAAAAAAAUAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"left_delete",
+					null,
+					"AQAAAA4AAAAAAAAADgAAAAAAAAABAAAAYQ",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAADwAAAAAAAAAPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"left_delete",
+					null,
+					"AQAAAA4AAAAAAAAADgAAAAAAAAABAAAALw",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAADwAAAAAAAAAPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": "pxd_"
+					},
+					"BAAAAA4AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABEAAAAAAAAAAAAAABEAAAAAAAAAEgAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAADgAAAAAAAAAOAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": "_big"
+					},
+					"BAAAABYAAAAAAAAAFwAAAAAAAAAAAAAAFwAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABkAAAAAAAAAAAAAABkAAAAAAAAAGgAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAFgAAAAAAAAAWAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAACAAAAAAAAAAIQAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					29,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAACEAAAAAAAAAIgAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAIQAAAAAAAAAhAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAIyBweGQ",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAAAAAAAAAAAAAAAAAAAAAABAAAACg",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAADkAAAAAAAAAOgAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAOQAAAAAAAAA5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAADoAAAAAAAAAOwAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAOgAAAAAAAAA6AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": "Dear"
+					},
+					"BAAAADsAAAAAAAAAPAAAAAAAAAAAAAAAPAAAAAAAAAA9AAAAAAAAAAAAAAA9AAAAAAAAAD4AAAAAAAAAAAAAAD4AAAAAAAAAPwAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAOwAAAAAAAAA7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					43,
+					1,
+					"insert",
+					{
+						"characters": "Py"
+					},
+					"AgAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					44,
+					1,
+					"insert",
+					{
+						"characters": "Gui"
+					},
+					"AwAAAEEAAAAAAAAAQgAAAAAAAAAAAAAAQgAAAAAAAABDAAAAAAAAAAAAAABDAAAAAAAAAEQAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAQQAAAAAAAABBAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"insert",
+					{
+						"characters": " and"
+					},
+					"BAAAAEQAAAAAAAAARQAAAAAAAAAAAAAARQAAAAAAAABGAAAAAAAAAAAAAABGAAAAAAAAAEcAAAAAAAAAAAAAAEcAAAAAAAAASAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": " Pillow"
+					},
+					"BwAAAEgAAAAAAAAASQAAAAAAAAAAAAAASQAAAAAAAABKAAAAAAAAAAAAAABKAAAAAAAAAEsAAAAAAAAAAAAAAEsAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABNAAAAAAAAAAAAAABNAAAAAAAAAE4AAAAAAAAAAAAAAE4AAAAAAAAATwAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					67,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAE8AAAAAAAAAUAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAATwAAAAAAAABPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					72,
+					1,
+					"insert",
+					{
+						"characters": "##"
+					},
+					"AgAAABsAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAdAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAGwAAAAAAAAAbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					75,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAFIAAAAAAAAAUwAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAUgAAAAAAAABSAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					76,
+					1,
+					"paste",
+					null,
+					"AQAAAFMAAAAAAAAAaQAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAUwAAAAAAAABTAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					77,
+					20,
+					"left_delete",
+					null,
+					"FAAAAGgAAAAAAAAAaAAAAAAAAAABAAAAZWcAAAAAAAAAZwAAAAAAAAABAAAAdGYAAAAAAAAAZgAAAAAAAAABAAAAb2UAAAAAAAAAZQAAAAAAAAABAAAAdWQAAAAAAAAAZAAAAAAAAAABAAAAcWMAAAAAAAAAYwAAAAAAAAABAAAAIGIAAAAAAAAAYgAAAAAAAAABAAAAYWEAAAAAAAAAYQAAAAAAAAABAAAAIGAAAAAAAAAAYAAAAAAAAAABAAAAc18AAAAAAAAAXwAAAAAAAAABAAAAaV4AAAAAAAAAXgAAAAAAAAABAAAAIF0AAAAAAAAAXQAAAAAAAAABAAAAdFwAAAAAAAAAXAAAAAAAAAABAAAAYVsAAAAAAAAAWwAAAAAAAAABAAAAaFoAAAAAAAAAWgAAAAAAAAABAAAAdFkAAAAAAAAAWQAAAAAAAAABAAAAIFgAAAAAAAAAWAAAAAAAAAABAAAAdFcAAAAAAAAAVwAAAAAAAAABAAAAeFYAAAAAAAAAVgAAAAAAAAABAAAAZVUAAAAAAAAAVQAAAAAAAAABAAAAVA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAaQAAAAAAAABpAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					78,
+					1,
+					"insert",
+					{
+						"characters": "pixel"
+					},
+					"BQAAAFUAAAAAAAAAVgAAAAAAAAAAAAAAVgAAAAAAAABXAAAAAAAAAAAAAABXAAAAAAAAAFgAAAAAAAAAAAAAAFgAAAAAAAAAWQAAAAAAAAAAAAAAWQAAAAAAAABaAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAVQAAAAAAAABVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					79,
+					1,
+					"insert",
+					{
+						"characters": " draw"
+					},
+					"BQAAAFoAAAAAAAAAWwAAAAAAAAAAAAAAWwAAAAAAAABcAAAAAAAAAAAAAABcAAAAAAAAAF0AAAAAAAAAAAAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAXgAAAAAAAABfAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAWgAAAAAAAABaAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					82,
+					1,
+					"cut",
+					null,
+					"AQAAAFMAAAAAAAAAUwAAAAAAAAAMAAAAPiBwaXhlbCBkcmF3",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAXwAAAAAAAABTAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					85,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAABkAAAAAAAAAGgAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAGQAAAAAAAAAZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					86,
+					1,
+					"paste",
+					null,
+					"AQAAABoAAAAAAAAAJgAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAGgAAAAAAAAAaAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					89,
+					1,
+					"cut",
+					null,
+					"AQAAABoAAAAAAAAAGgAAAAAAAAAMAAAAPiBwaXhlbCBkcmF3",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAJgAAAAAAAAAaAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					95,
+					1,
+					"paste",
+					null,
+					"AQAAAAAAAAAAAAAADAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"left_delete",
+					null,
+					"AQAAACYAAAAAAAAAJgAAAAAAAAABAAAACg",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAJwAAAAAAAAAnAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					101,
+					1,
+					"cut",
+					null,
+					"AQAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAPiBwaXhlbCBkcmF3",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					104,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAFMAAAAAAAAAVAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAUwAAAAAAAABTAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"paste",
+					null,
+					"AQAAAFQAAAAAAAAAYAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAVAAAAAAAAABUAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					108,
+					1,
+					"insert",
+					{
+						"characters": "pxd"
+					},
+					"AwAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABYAAAAAAAAAAAAAABYAAAAAAAAAFkAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAVgAAAAAAAABWAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					109,
+					1,
+					"insert",
+					{
+						"characters": " -"
+					},
+					"AgAAAFkAAAAAAAAAWgAAAAAAAAAAAAAAWgAAAAAAAABbAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAWQAAAAAAAABZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					110,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAFsAAAAAAAAAXAAAAAAAAAAAAAAA",
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAWwAAAAAAAABbAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/RaylibC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/RaylibC.sublime-build",
+					"Build Only"
+				]
+			],
+			[
+				"Packages/User/RaylibC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/RaylibC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/RaylibC.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/RaylibC.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"term",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"keybind",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"termin",
+				"Terminus: List Shells"
+			],
+			[
+				"syntax p",
+				"Set Syntax: Python"
+			],
+			[
+				"ter",
+				"Terminus: List Shells"
+			],
+			[
+				"scheme",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"PackageDev: Edit Current Theme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp res",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"custo",
+				"UI: Customize Color Scheme"
+			],
+			[
+				"edit theme",
+				"PackageDev: Edit Current Theme"
+			],
+			[
+				"togg",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"package sett",
+				"Preferences: Package Control Settings"
+			],
+			[
+				"rain",
+				"RainbowBrackets: Close"
+			],
+			[
+				"rainbo",
+				"RainbowBrackets: Close"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"c",
+				"UI: Customize Theme"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"materi",
+				"Material Theme: Configuration"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"set synta",
+				"Set Syntax: C"
+			],
+			[
+				"git",
+				"Set Syntax: Git Log"
+			],
+			[
+				"github",
+				"GitHub: Repository"
+			],
+			[
+				"INSTALL",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"curso",
+				"CursorRuler: Toggle Enabled/Disabled"
+			],
+			[
+				"cursor",
+				"CursorRuler: Wrap Lines"
+			],
+			[
+				"rainbow",
+				"RainbowBrackets: Close"
+			],
+			[
+				"element",
+				"Material Theme: Advanced configuration"
+			],
+			[
+				"THEME",
+				"UI: Customize Theme"
+			],
+			[
+				"MATERIAL",
+				"Material Theme: Advanced configuration"
+			],
+			[
+				"PACKAGE SET",
+				"Preferences: Package Control Settings"
+			],
+			[
+				"MATER",
+				"Material Theme: Configuration"
+			],
+			[
+				"RAINBOW",
+				"RainbowBrackets: Sweep"
+			],
+			[
+				"INST",
+				"Package Control: Install Package"
+			],
+			[
+				"PACKA RE",
+				"Package Control: Remove Package"
+			],
+			[
+				"RAIN",
+				"Preferences: RainbowBrackets Settings"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"custom",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"mater",
+				"Material Theme: Configuration"
+			],
+			[
+				"schem",
+				"UI: Select Color Scheme"
+			],
+			[
+				"termi",
+				"Terminus: Reset"
+			],
+			[
+				"scheme edit",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Satisfy Packages"
+			],
+			[
+				"set scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"edit color scheme",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"guna",
+				"Guna"
+			],
+			[
+				"pref pack",
+				"Preferences: Package Control Settings"
+			],
+			[
+				"is",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Advanced Install Packages"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"materia",
+				"Material Theme: Configuration"
+			],
+			[
+				"material",
+				"Material Theme: Configuration"
+			],
+			[
+				"pick",
+				"Color Picker"
+			],
+			[
+				"istall",
+				"Package Control: Install Package"
+			],
+			[
+				"color scheme edi",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"packagede",
+				"PackageDev: New Color Scheme"
+			],
+			[
+				"lsp setting",
+				"Preferences: LSP-clangd Settings"
+			],
+			[
+				"clang",
+				"Preferences: LSP-clangd Settings"
+			],
+			[
+				"LPS rese",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp: res",
+				"LSP: Restart Server"
+			],
+			[
+				"color scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"github ",
+				"Preferences: GitHubTools"
+			],
+			[
+				"git ",
+				"Set Syntax: Git Config"
+			],
+			[
+				"Terminus",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"color them",
+				"UI: Select Color Scheme"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"UI: Select Color Scheme"
+			],
+			[
+				"lsp ena",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"REMOCE",
+				"Package Control: Remove Package"
+			],
+			[
+				"COLOR PICKER",
+				"Color Picker: Insert Color"
+			],
+			[
+				"install package ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Code/pxd"
+	],
+	"file_history":
+	[
+		"/C/Code/pxd/ide/pxd-venv.sublime-build",
+		"/C/Code/pxd/img_io.py",
+		"/C/Code/pxd/main.py",
+		"/C/Code/pxd/venv/test.py",
+		"/C/Code/pxd/venv/.gitignore",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/pxd-venv.sublime-build",
+		"/C/Code/tmgui/include/tmgui.h",
+		"/C/Code/tmgui/lib/tmgui.c",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/Water_Ritual.tmTheme",
+		"/C/Users/theja/OneDrive/Desktop/WaterRitual.sublime-color-scheme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/Water_Ritual.sublime-color-scheme",
+		"/C/Code/libs/Raylib/include/raylib.h",
+		"/C/Code/tmgui/.gitignore",
+		"/C/Code/tmgui/lib/compile_flags.txt",
+		"/C/Code/tmgui/lib/compile_flags",
+		"/C/Code/tmgui/.git/COMMIT_EDITMSG",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/Live&Drink.sublime-theme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/gimmie.sublime-theme",
+		"/C/Code/tmgui/notes.txt",
+		"/C/Users/theja/OneDrive/Desktop/Microbe-2 v1.01/Microbe-2.char",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/waterRitual_theme.sublime-theme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/Material-Theme-WaterRitual.sublime-theme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/water.sublime-theme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/Goona.sublime-theme",
+		"/C/Code/tmgui/.clangd",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/Water_Ritual.tmTheme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/water_ritual.sublime-theme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/Earthsong_Dark.sublime-color-scheme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/Earthsong_Dark.tmTheme",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/Colorsublime - Themes/Flatgrammer.tmTheme",
+		"/C/Code/tmgui/lib/.clangd",
+		"/C/Code/tmgui/old.c",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/RaylibC.sublime-build",
+		"/C/Code/tmgui/README.md",
+		"/C/Users/theja/OneDrive/Desktop/tmgui.h",
+		"/C/Users/theja/OneDrive/Desktop/tmgui.c",
+		"/C/Code/tmgui/fonts/Kitchen Sink.ttf",
+		"/C/Code/tmgui/tmgui.c",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/User/RaylibC",
+		"/C/Code/TileGen/tmgui.c",
+		"/C/Code/TileGen/test.py",
+		"/C/Users/theja/Downloads/test.py",
+		"/C/Code/OdinGame/NOTES.txt",
+		"/C/Code/OdinGame/assets/round_cat.png",
+		"/C/Odin/vendor/raylib/raylib.odin",
+		"/C/Users/theja/Downloads/pixel_tool_demo.py",
+		"/C/Users/theja/OneDrive/Desktop/Raylib Tools/rguilayout_v4.0_win_x64/USAGE.md",
+		"/C/Users/theja/OneDrive/Desktop/Raylib Tools/layout_name.c",
+		"/C/Odin/core/math/linalg/general.odin",
+		"/C/Code/OdinGame/source/game.odin",
+		"/C/Users/theja/Documents/Game Dev/GitProjects/BuildsRepo/Jacobsgames/mario-more/mario.c",
+		"/C/Odin/core/mem/alloc.odin",
+		"/C/Odin/core/fmt/fmt.odin",
+		"/C/Code/OdinGame/source/NOTES.txt",
+		"/C/Code/OdinGame/source/notes.odin",
+		"/C/Users/theja/AppData/Roaming/Sublime Text/Packages/Colorsublime/Colorsublime.sublime-settings",
+		"/C/Code/odin-raylib-hot-reload-game-template-main/source/game.odin",
+		"/C/Code/OdinGame/build_hot_reload.bat",
+		"/C/Code/OdinGame/source/main_hot_reload/main_hot_reload.odin",
+		"/C/Odin/vendor/raylib/raygui.odin",
+		"/C/Code/odin-raylib-hot-reload-game-template-main/source/HiWorld.odin",
+		"/C/Odin/odin.exe"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ui.set_time",
+			"us.set_time",
+			"main_window",
+			"image_io",
+			"dpg",
+			"ui",
+			"dpg"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Code/pxd/README.md",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 16,
+							"color_helper.color_scheme": "Packages/User/Water_Ritual.tmTheme",
+							"color_helper.refresh": false,
+							"color_helper.scan":
+							{
+								"allow_scanning": true,
+								"color_class":
+								[
+									{
+										"class": "css-level-4",
+										"scopes": ""
+									}
+								],
+								"color_trigger": "(?xi)\n(?:\n    \\b(?<![-#&$])(?:\n        color\\((?!\\s*-)|(?:hsla?|(?:ok)?(?:lch|lab)|hwb|rgba?)\\(\n) |\n\\b(?<![-#&$])[\\w]{3,}(?![(-])\\b|(?<![&])\\#)\n",
+								"current_ext": ".md",
+								"current_syntax": "Markdown/Markdown",
+								"enabled": true,
+								"last_updated": 1751088756.65,
+								"scanning": "meta.declaration-list.css -support.type.property-name.css -comment -string,meta.property-value.css -comment -string,meta.value.css -comment -string,meta.tag.inline.any.html string.quoted -constant.character.entity.html,meta.tag.any.html meta.attribute-with-value.style.html"
+							},
+							"lsp_uri": "file:///C:/Code/pxd/README.md",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"file": "/C/Code/pxd/pixel_test.png",
+					"semi_transient": false,
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "image"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 97.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus":
+	{
+		"height": 174.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 2":
+	{
+		"height": 155.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 3":
+	{
+		"height": 118.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 4":
+	{
+		"height": 118.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 5":
+	{
+		"height": 118.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 6":
+	{
+		"height": 124.0,
+		"history":
+		[
+		]
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.exec":
+	{
+		"height": 177.0,
+		"history":
+		[
+		]
+	},
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "Packages/User/pxd-venv.sublime-build",
+	"project": "pxd_project.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"build",
+				"C:\\Users\\theja\\AppData\\Roaming\\Sublime Text\\Packages\\User\\RaylibC.sublime-build"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": false
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
