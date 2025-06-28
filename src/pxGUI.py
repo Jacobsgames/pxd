@@ -1,5 +1,6 @@
 # “A lightweight Python immediate mode GUI built on raylib.”
 import raylibpy as rl
+import math
 
 # --- GLOBALS ---
 px_font = None
@@ -78,15 +79,32 @@ def blit_text(x, y, text, style: TextStyle = None):
     rl.draw_text_ex(style.font, text, (x, y), style.size, 0, style.color)
 
 # Composite label from rect and text; accepts optional LabelStyle
-def blit_label(x, y, w, h, text, style: LabelStyle = None):
+def blit_label(x: int, y: int, w: int, h: int, text: str, style: LabelStyle = None):
+    # Use provided style or default to theme's label style
     style = style or px_theme.label
-    draw_rect(x, y, w, h, style.rect)
-    # center text
-    sz = style.text.size
-    tw = rl.measure_text(text, sz)
-    tx = x + (w - tw) // 2
-    ty = y + (h - sz) // 2
-    blit_text(tx, ty, text, style.text)
+
+    # Draw the label's background rectangle
+    blit_rect(x, y, w, h, style.rect)
+
+    # Get text style for measurement and drawing
+    text_style = style.text
+
+    # Measure actual text size for precise centering
+    text_size_vec = rl.measure_text_ex(text_style.font, text, text_style.size, 0)
+    text_width = text_size_vec.x    # Actual rendered text width
+    text_height = text_size_vec.y   # Actual rendered text height (crucial for vertical centering)
+
+    # Calculate X position to horizontally center text
+    tx = x + math.floor((w - text_width) / 2)
+
+    # Calculate Y position to vertically center text
+    ty = y + math.floor((h - text_height) / 2)
+
+    # Draw the text at the calculated centered position
+    blit_text(int(tx), int(ty), text, text_style)
+
+    # Debug rect around text (uncomment to visualize text bounds)
+    # rl.draw_rectangle_lines(int(tx), int(ty), int(text_width), int(text_height), rl.WHITE)
 
 # --- LAYOUT ELEMENTS --- (composed mainly of 'blits)
 

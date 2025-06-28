@@ -172,6 +172,11 @@ while not rl.window_should_close():
     ui.blit_rect(-1, -2, 1932, 24)            # placeholder top bar
     ui.blit_text(4, 2, "pxd")                 # placeholder title
     ui.blit_rect(-1, 64, 128, 512)            # placeholder side
+    ui.blit_label(512, 24, 64, 24, "Edit")            # placeholder label
+
+
+
+    
     fps_count()
     rl.end_drawing()
 
