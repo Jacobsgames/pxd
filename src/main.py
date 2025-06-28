@@ -234,8 +234,8 @@ while not rl.window_should_close():
 
 
     draw_canvas(canvas_pos_x, canvas_pos_y)  # Draw zoomed and panned canvas
-    ui.draw_rect(-1,-2,1932,24, 1,rgba(0, 0, 0, 255), rgba(255, 255, 255, 255)) #placeholder top bar
-    ui.draw_rect(-1,64,128,512, 1,rgba(0, 0, 0, 255), rgba(255, 255, 255, 255))
+    ui.draw_rect(-1,-2,1932,24) #placeholder top bar
+    ui.draw_rect(-1,64,128,512)
     fps_count()
    
 
