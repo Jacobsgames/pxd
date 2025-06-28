@@ -65,12 +65,11 @@ def blit_rect(x, y, w, h, style: RectStyle = None):
     fill = style.fill
     b_clr = style.border
     bw = style.border_width
-    rl.draw_rectangle(x, y, w, h, fill)
-    # borders
-    rl.draw_rectangle(x, y, w, bw, b_clr)               # Top
-    rl.draw_rectangle(x, y + h - bw, w, bw, b_clr)      # Bottom
-    rl.draw_rectangle(x, y + bw, bw, h - 2 * bw, b_clr) # Left
-    rl.draw_rectangle(x + w - bw, y + bw, bw, h - 2 * bw, b_clr) # Right
+    rl.draw_rectangle(x, y, w, h, fill)                             # borders
+    rl.draw_rectangle(x, y, w, bw, b_clr)                           # Top
+    rl.draw_rectangle(x, y + h - bw, w, bw, b_clr)                  # Bottom
+    rl.draw_rectangle(x, y + bw, bw, h - 2 * bw, b_clr)             # Left
+    rl.draw_rectangle(x + w - bw, y + bw, bw, h - 2 * bw, b_clr)    # Right
 
 # Draw styled text; accepts optional TextStyle
 def blit_text(x, y, text, style: TextStyle = None):
@@ -78,33 +77,25 @@ def blit_text(x, y, text, style: TextStyle = None):
     # draw_text_ex(font, text, position, fontSize, spacing, tint)
     rl.draw_text_ex(style.font, text, (x, y), style.size, 0, style.color)
 
-# Composite label from rect and text; accepts optional LabelStyle
+# Draw styled text with background rect; accepts optional LabelStyle
 def blit_label(x: int, y: int, w: int, h: int, text: str, style: LabelStyle = None):
-    # Use provided style or default to theme's label style
-    style = style or px_theme.label
+    style = style or px_theme.label                                                     # Use arg style or default
+    text_style = style.text                                                             # Get text style for measurement and drawing
+    blit_rect(x, y, w, h, style.rect)                                                   # Draw the label's rect
+    # --- Text Measurment
+    text_size_vec = rl.measure_text_ex(text_style.font, text, text_style.size, 0)       # Get actual text size for centering
+    text_width = text_size_vec.x                                                        # Rendered text width
+    text_height = text_size_vec.y                                                       # Rendered text height (crucial for vertical centering)
+    # --- Centering
+    tx = x + math.floor((w - text_width) / 2)                                           # Get X pos to horizontally center text
+    ty = y + math.floor((h - text_height) / 2)                                          # Get Y pos to vertically center text
 
-    # Draw the label's background rectangle
-    blit_rect(x, y, w, h, style.rect)
-
-    # Get text style for measurement and drawing
-    text_style = style.text
-
-    # Measure actual text size for precise centering
-    text_size_vec = rl.measure_text_ex(text_style.font, text, text_style.size, 0)
-    text_width = text_size_vec.x    # Actual rendered text width
-    text_height = text_size_vec.y   # Actual rendered text height (crucial for vertical centering)
-
-    # Calculate X position to horizontally center text
-    tx = x + math.floor((w - text_width) / 2)
-
-    # Calculate Y position to vertically center text
-    ty = y + math.floor((h - text_height) / 2)
-
-    # Draw the text at the calculated centered position
-    blit_text(int(tx), int(ty), text, text_style)
+    blit_text(int(tx), int(ty), text, text_style)                                       # Draw centered text
 
     # Debug rect around text (uncomment to visualize text bounds)
     # rl.draw_rectangle_lines(int(tx), int(ty), int(text_width), int(text_height), rl.WHITE)
+
+
 
 # --- LAYOUT ELEMENTS --- (composed mainly of 'blits)
 
