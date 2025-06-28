@@ -31,7 +31,7 @@ class Theme:
         self.label = label
 
 
-# Initialize the GUI subsystem
+# Initialize the GUI subsystem & Raylib window
 def pxgui_init():
     global px_font, px_theme, _initialized
     if _initialized:
@@ -56,7 +56,7 @@ def pxgui_init():
 
  
 
-# --- PRIMITIVES ---
+# --- 'BLIT' PRIMITIVES ---
 
 # Draw styled rectangle; accepts optional RectStyle
 def blit_rect(x, y, w, h, style: RectStyle = None):
@@ -87,6 +87,8 @@ def blit_label(x, y, w, h, text, style: LabelStyle = None):
     tx = x + (w - tw) // 2
     ty = y + (h - sz) // 2
     blit_text(tx, ty, text, style.text)
+
+# --- LAYOUT ELEMENTS --- (composed mainly of 'blits)
 
 # Very minimal button for testing
 def button(x, y, w, h, text):
