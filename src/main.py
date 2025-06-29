@@ -12,7 +12,7 @@ cell_size = 16              # Initial canvas scale (zoom level)
 
 # Zoom limits
 MIN_SCALE = 4
-MAX_SCALE = 32
+MAX_SCALE = 64
 
 # --- Canvas State ---
 canvas_image = None        # CPU‐side image storing pixel data
@@ -35,7 +35,7 @@ def fps_count():
     fps_text = f"FPS: {rl.get_fps()}"
     tw = rl.measure_text(fps_text, 20)
     x = rl.get_screen_width() - tw - 5
-    rl.draw_text(fps_text, x, 2, 20, rgba(200, 200, 200, 255))
+    rl.draw_text(fps_text, x, 0, 20, rgba(200, 200, 200, 255))
 
 # --- Initialize blank canvas image and texture ---
 def init_canvas(w, h):
@@ -131,7 +131,7 @@ def canvas_panning(active: bool):
 
 # init our GUI library (loads theme & font into pxgui.px_theme)
 ui.pxgui_init()
-
+set_window_theme("DARK")
 init_canvas(canvas_width, canvas_height)
 
 # --- Main Loop ---
@@ -169,11 +169,14 @@ while not rl.window_should_close():
     rl.begin_drawing()
     rl.clear_background(rgba(20, 20, 20, 255))
     draw_canvas(canvas_pos_x, canvas_pos_y)
-    ui.blit_rect(-1, -2, 1932, 24)            # placeholder top bar
-    ui.blit_text(12, -2, "pxd")                 # placeholder title
-    ui.blit_rect(-1, 64, 128, 512)            # placeholder side
-    ui.blit_label(64, 0, 64, 22, "Edit")            # placeholder label
-    ui.blit_label(127, 0, 64, 22, "Tools")            # placeholder label
+
+    ui.set_h_align(ui.ALIGN_CENTER)
+    ui.blit_rect(-1, -2, 1932, 20)            # placeholder top bar
+    ui.blit_rect(-1, 64, 128, 512)            # placeholder side box
+    ui.blit_label(0, 0, 70, 18, "File")       # placeholder label 
+    ui.blit_label(70, 0, 70, 18, "Edit")      # placeholder label 
+    ui.blit_label(140, 0, 70, 18, "Tools")    # placeholder label
+    ui.blit_label(210, 0, 70, 18, "Help")     # placeholder label
 
 
 

@@ -14,12 +14,12 @@ TARGET_FPS = 60
 # If it's in a 'fonts' folder next to the script, use "fonts/monogram.ttf"
 # A robust way is to use os.path.join and os.path.dirname
 current_script_dir = os.path.dirname(__file__)
-FONT_PATH = os.path.join(current_script_dir, "../AdapaMono.ttf") # Assumes it's one level up
+FONT_PATH = os.path.join(current_script_dir, "../awkward.ttf") # Assumes it's one level up
 
 # Define the list of font sizes to test
 # Common pixel font sizes: 6, 8, 10, 12, 16, 20, 24, 32
 # Start with sizes known to be common pixel art font bases.
-TEST_FONT_SIZES = [6, 8, 10, 13, 26, 52, 104, 20, 24, 32]
+TEST_FONT_SIZES = [6, 8, 10, 12, 16, 20, 24, 32, 64]
 # Test a wider range if needed, or specific multiples of 6 or 12.
 
 # --- Global Font Storage ---
@@ -87,7 +87,7 @@ def run_font_test():
 
             # Advance Y for the next line of text
             # Use the measured height for proper spacing between lines + some padding
-            current_draw_y += int(text_measured_size.y) + 5 # 5 pixels additional padding
+            current_draw_y += int(text_measured_size.y) + 15 # 5 pixels additional padding
 
             # If we're getting close to the bottom, break or adjust
             if current_draw_y > SCREEN_HEIGHT - 30:
