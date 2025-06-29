@@ -170,9 +170,10 @@ while not rl.window_should_close():
     rl.clear_background(rgba(20, 20, 20, 255))
     draw_canvas(canvas_pos_x, canvas_pos_y)
     ui.blit_rect(-1, -2, 1932, 24)            # placeholder top bar
-    ui.blit_text(4, 2, "pxd")                 # placeholder title
+    ui.blit_text(12, -2, "pxd")                 # placeholder title
     ui.blit_rect(-1, 64, 128, 512)            # placeholder side
-    ui.blit_label(512, 24, 64, 24, "Edit")            # placeholder label
+    ui.blit_label(64, 0, 64, 22, "Edit")            # placeholder label
+    ui.blit_label(127, 0, 64, 22, "Tools")            # placeholder label
 
 
 

@@ -43,13 +43,14 @@ def pxgui_init():
     rl.maximize_window()
     rl.set_target_fps(60)
 
-    px_font = rl.load_font_ex("../kitchen sink.ttf", 16, None, 0)
+    px_font = rl.load_font_ex("../Arbata Compact.ttf", 12, None, 0)
+    rl.set_texture_filter(px_font.texture, rl.TEXTURE_FILTER_POINT) # Crucial for pixel fonts
     px_theme = Theme(
         rect = RectStyle(rl.BLACK, rl.WHITE, 1),             # Rect
-        text = TextStyle(px_font, 16, rl.RAYWHITE),          # Text
+        text = TextStyle(px_font, 24, rl.RAYWHITE),          # Text
         label = LabelStyle(                                  # ↓ Label
-            rect=RectStyle(rl.DARKGRAY, rl.LIGHTGRAY, 2),    # |->  Rect
-            text=TextStyle(px_font, 16, rl.WHITE),           # |->  Text
+            rect=RectStyle(rl.DARKGRAY, rl.LIGHTGRAY, 1),    # |->  Rect
+            text=TextStyle(px_font, 24, rl.WHITE),           # |->  Text
         ),
     )
 
